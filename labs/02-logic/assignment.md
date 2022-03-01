@@ -83,7 +83,7 @@
 
 3. Link to your public EDA Playground example:
 
-   [Eda](https://www.edaplayground.com/x/aQAE)
+
    
    
    https://www.edaplayground.com/x/aQAE
