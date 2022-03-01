@@ -1,4 +1,4 @@
-# Lab 2: YOUR_FIRSTNAME LASTNAMEE
+# Lab 2: MATUS BOHUCKY
 <a name="preparation"></a>
 
 ## Preparation tasks (done before the lab at home)
@@ -36,21 +36,21 @@
 
    Greater than:
 
-   ![K-maps](images/kmap_empty.png)
+   ![K-maps](images/greater.png)
 
    Less than:
 
-   ![K-maps](images/kmap_empty.png)
+   ![K-maps](images/less.png)
 
 2. Equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
+   ![Logic functions](images/F.png)
 
 ### 4-bit comparator
 
 1. Listing of VHDL stimulus process from testbench file (`testbench.vhd`) with at least one assert (use BCD codes of your student ID digits as input combinations). Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   Last two digits of my student ID: **xxxx??**
+   Last two digits of my student ID: **221536**
 
 ```vhdl
     p_stimulus : process
@@ -59,27 +59,31 @@
         report "Stimulus process started" severity note;
 
         -- First test case
-        s_b <= "0000"; s_a <= "0010"; wait for 100 ns;
-        -- ... and its expected outputs
+        s_b <= "0011";     --3
+        s_a <= "0110";     --6   
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and
                 (s_B_equals_A  = '0') and
                 (s_B_less_A    = '1'))
-       -- If true, then do not report anything
-        report "Input combination ID numbers 0000, 0010 FAILED" severity error;
+        -- If false, then report an error
+        report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
 
-       
+        -- Report a note at the end of stimulus process
+        report "Stimulus process finished" severity note;
+        wait;
     end process p_stimulus;
 ```
 
 2. Text console screenshot during your simulation, including reports.
 
-   ![your figure]()
+   ![Done](images/Log1.png)
+
+   ![Process failed](images/Log2.png)
 
 3. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   [Eda](https://www.edaplayground.com/x/aQAE)
    
    
-   https://www.edaplayground.com/x/Xqcb
+   https://www.edaplayground.com/x/aQAE
