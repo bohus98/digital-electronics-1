@@ -76,9 +76,9 @@
 ```
 
 2. Text console screenshot during your simulation, including reports.
-
+   1. Done
    ![Done](images/Log1.png)
-
+   2. Process failed
    ![Process failed](images/Log2.png)
 
 3. Link to your public EDA Playground example:
