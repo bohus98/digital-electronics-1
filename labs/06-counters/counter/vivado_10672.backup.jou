@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Mar 23 09:22:56 2022
+# Process ID: 10672
+# Current directory: D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6992 D:\Documents\xbohuc00\digital-electronics-1\labs\06-counters\counter\counter.xpr
+# Log file: D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/vivado.log
+# Journal file: D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top cnt_up_down [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_cnt_up_down.tcl
+close_sim
+save_wave_config {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav.wcfg}
+save_wave_config {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav.wcfg}
+close_sim
+close [ open D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/sources_1/new/top.vhd w ]
+add_files D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/sources_1/new/top.vhd
+update_compile_order -fileset sources_1
+file mkdir D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/constrs_1
+file mkdir D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/constrs_1/new
+close [ open D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/constrs_1/new/nexys-a7-50t.xdc w ]
+add_files -fileset constrs_1 D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/constrs_1/new/nexys-a7-50t.xdc
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_cnt_up_down.tcl
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_sim
