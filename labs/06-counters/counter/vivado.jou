@@ -38,3 +38,24 @@ set_property PROGRAM.FILE {D:/Documents/xbohuc00/digital-electronics-1/labs/06-c
 program_hw_devices [get_hw_devices xc7a50t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
 close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+close_hw_manager
+launch_simulation
+source tb_cnt_up_down.tcl
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+save_wave_config {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav1.wcfg}
+add_files -fileset sim_1 -norecurse D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav1.wcfg
+set_property xsim.view D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav1.wcfg [get_filesets sim_1]
+close_sim

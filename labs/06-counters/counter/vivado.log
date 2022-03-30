@@ -102,3 +102,124 @@ INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3294.820 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AD2DE7A
+set_property PROGRAM.FILE {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_cnt_up_down' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_cnt_up_down_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto 9ea0783e79e94948a2946590cfaeeb93 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_cnt_up_down_behav xil_defaultlib.tb_cnt_up_down -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 9ea0783e79e94948a2946590cfaeeb93 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_cnt_up_down_behav xil_defaultlib.tb_cnt_up_down -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_cnt_up_down_behav -key {Behavioral:sim_1:Functional:tb_cnt_up_down} -tclbatch {tb_cnt_up_down.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_cnt_up_down.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_cnt_up_down/p_stimulus  File: D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/sim_1/new/tb_cnt_up_down.vhd
+Note: Stimulus process finished
+Time: 600 ns  Iteration: 0  Process: /tb_cnt_up_down/p_stimulus  File: D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.srcs/sim_1/new/tb_cnt_up_down.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_cnt_up_down_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 3438.320 ; gain = 36.605
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3446.164 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AD2DE7A
+set_property PROGRAM.FILE {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+save_wave_config {D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav1.wcfg}
+add_files -fileset sim_1 -norecurse D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav1.wcfg
+ERROR: [Vivado 12-106] *** Exception: java.io.FileNotFoundException: C:\Users\NEWDEF~1\AppData\Local\Temp\Vivado4298455043119842396\sigasi.xml (The system cannot find the path specified) (See D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/vivado_pid3204.debug)
+set_property xsim.view D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/tb_cnt_up_down_behav1.wcfg [get_filesets sim_1]
+ERROR: [Vivado 12-106] *** Exception: java.io.FileNotFoundException: C:\Users\NEWDEF~1\AppData\Local\Temp\Vivado4298455043119842396\sigasi.xml (The system cannot find the path specified) (See D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/vivado_pid3204.debug)
+ERROR: [Vivado 12-106] *** Exception: java.io.FileNotFoundException: C:\Users\NEWDEF~1\AppData\Local\Temp\Vivado4298455043119842396\sigasi.xml (The system cannot find the path specified) (See D:/Documents/xbohuc00/digital-electronics-1/labs/06-counters/counter/vivado_pid3204.debug)
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 23 10:16:55 2022...

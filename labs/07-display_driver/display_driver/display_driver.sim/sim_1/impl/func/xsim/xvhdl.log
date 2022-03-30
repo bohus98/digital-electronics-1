@@ -1,0 +1,20 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.sim/sim_1/impl/func/xsim/tb_driver_7seg_4digits_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-3107] analyzing entity 'cnt_up_down'
+INFO: [VRFC 10-3107] analyzing entity 'hex_7seg'
+INFO: [VRFC 10-3107] analyzing entity 'driver_7seg_4digits'
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'clock_enable' [D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/clock_enable.vhd:15]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/cnt_up_down.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cnt_up_down'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'cnt_up_down' [D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/cnt_up_down.vhd:19]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hex_7seg'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'hex_7seg' [D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd:9]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/driver_7seg_4digits.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'driver_7seg_4digits'
+WARNING: [VRFC 10-3607] overwriting existing primary unit 'driver_7seg_4digits' [D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sources_1/new/driver_7seg_4digits.vhd:43]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/07-display_driver/display_driver/display_driver.srcs/sim_1/new/tb_driver_7seg_4digits.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_driver_7seg_4digits'
