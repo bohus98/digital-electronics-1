@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Apr  6 09:47:15 2022
+# Process ID: 280
+# Current directory: D:/Documents/xbohuc00/digital-electronics-1/labs/08-traffic_lights/traffic
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2564 D:\Documents\xbohuc00\digital-electronics-1\labs\08-traffic_lights\traffic\traffic.xpr
+# Log file: D:/Documents/xbohuc00/digital-electronics-1/labs/08-traffic_lights/traffic/vivado.log
+# Journal file: D:/Documents/xbohuc00/digital-electronics-1/labs/08-traffic_lights/traffic\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Documents/xbohuc00/digital-electronics-1/labs/08-traffic_lights/traffic/traffic.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source top.tcl
+launch_simulation -mode post-synthesis -type functional
+source top.tcl
+launch_simulation -mode post-implementation -type functional
+source top.tcl
+launch_simulation -mode post-implementation -type timing
+source top.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_tlc [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tlc [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+close_sim
+current_sim simulation_3
+close_sim
+current_sim simulation_2
+close_sim
+close_sim

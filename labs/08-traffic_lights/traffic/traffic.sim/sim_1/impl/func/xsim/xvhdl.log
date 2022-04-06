@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbohuc00/digital-electronics-1/labs/08-traffic_lights/traffic/traffic.sim/sim_1/impl/func/xsim/top_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-3107] analyzing entity 'tlc'
+INFO: [VRFC 10-3107] analyzing entity 'top'

@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Documents/xbohuc00/digital-electronics-1/labs/08-traffic_lights/traffic/traffic.sim/sim_1/impl/timing/xsim/top_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_enable
+INFO: [VRFC 10-311] analyzing module tlc
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl
